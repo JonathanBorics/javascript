@@ -1,0 +1,4 @@
+###Git command
+git staus megnezi a pillanatnyi git helyzetet 
+git add . minden valtozast adj hozza a gitnek 
+git commit -m "szoveg"
