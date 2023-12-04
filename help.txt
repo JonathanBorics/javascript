@@ -2,3 +2,13 @@
 git staus megnezi a pillanatnyi git helyzetet 
 git add . minden valtozast adj hozza a gitnek 
 git commit -m "szoveg"
+  
+
+Number.parseInt() minden sztringet szamma alakit 
+Number.parseFloat() minden sztringet float alakit 
+
+// szoras ...
+const lista1=[1,2,3];
+const lista2=[4,5,6];
+const szamok [...lista1,lista2];
+vegerdmeny=[1,2,3,4,5,6];
