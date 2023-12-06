@@ -1,41 +1,47 @@
-const korhazBajmok =require('../database');
+ const korhazBajmok =require('./database');
 
 
-const paciensek=[ ...korhazBajmok.doktorok[0].paciensek, ...korhazBajmok.doktorok[1].paciensek];  
+const paciensek=[ ...korhazBajmok.doktorok[0].paciensek,
+ ...korhazBajmok.doktorok[1].paciensek,
+ ...korhazBajmok.doktorok[2].paciensek
+];  
+const medicine=[];
+const Brufen = "Brufen";
+const Bensedin = "Bensedin";
+const Glucophage = "Glucophage";
+const Diclophen = "Diclophen";
 
-//console.log(paciensek[0]);
+for(let i=0;i<paciensek.length;i++){
+    
+    const gyogyszerlista =[];
+    const nev = paciensek[i].nev;
+    const magassag = paciensek[i].magassag;
+    const suly = paciensek[i].suly;
+    const kor = paciensek[i].kor;
+    const id  = paciensek[i].id;
+    const insurance = paciensek[i].insurance;  
+    
+    let pacienssulya = Number.parseInt(suly);
+    let paciensmagassag = Number.parseInt(magassag);
+    let pacienskor = Number.parseInt(kor); 
+  
+    
+      if (paciensmagassag > 175) {
+        gyogyszerlista.push(Brufen);
+      }
+    
+  if (pacienssulya < 70 && pacienskor < 30) {
+    gyogyszerlista.push(Bensedin);
+  }
+  if (pacienssulya > 100 && insurance) {
+    gyogyszerlista.push(Glucophage);
+  }
+  if (pacienskor > 60 && insurance) {
+    gyogyszerlista.push(Diclophen);
+  }
+    
+  medicine[nev] = gyogyszerlista.length > 0 ? gyogyszerlista : 0; 
+    
 
-const paci=paciensek;
-for(let i=0;i<7;i++){ 
-if(paci[i].insurance && paci[i].kor >40){
-    console.log("okaaay he/she have");
 }
-else{
-    console.log("nooo he/she dont have");
-}
-}
-// for(let i=0;i<paciensek.length;i++){
-//  console.log(paciensek[i].nev);
-
-// }
-
-
-
-
-
-
-
-
-
-
-// let bla = new Set();
-
-// for (let i = 0; i < korhazBajmok.doktorok.length; i++) {
-//   for (let j = 0; j < korhazBajmok.doktorok[i].paciensek.length; j++) {
-//     let paciens = korhazBajmok.doktorok[i].paciensek[j];
-//     let hu = `${paciens.nev} - ${paciens.kor} éves - ${paciens.magassag} magas - ${paciens.suly} súly`;
-//     bla.add(hu);
-//   }
-// }
-
-// console.log(bla);
+console.log(medicine);  

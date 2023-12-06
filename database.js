@@ -1,99 +1,114 @@
-const suly = "kg";
 const magassag = "cm";
-const paciens1 = {
+const suly = "kg";
+
+const Csilla = {
   nev: "Csilla",
   kor: 25,
-  magassag: 168 + magassag,
+  magassag: 178 + magassag,
   suly: 57 + suly,
   id: 1,
   insurance: true,
-  //Bensedin
-};
+}; // Brufen, Bensedin
 
-const paciens2 = {
-  nev: "Viola",
-  kor: 40,
-  magassag: 165 + magassag,
-  suly: 65 + suly,
+const Barnabas = {
+  nev: "Barnabás",
+  kor: 17,
+  magassag: 195 + magassag,
+  suly: 75 + suly,
   id: 2,
   insurance: false,
-  //null
-};
+}; // Brufen
 
-const paciens3 = {
-  nev: "Gyuri",
-  kor: 48,
-  magassag: 186 + magassag,
-  suly: 97 + suly,
+const Zsigmond = {
+  nev: "Zsigmond",
+  kor: 61,
+  magassag: 180 + magassag,
+  suly: 87 + suly,
   id: 3,
   insurance: true,
-  //Brufen
-};
+}; // Brufen, Diclophen
 
-const paciens4 = {
-  nev: "Viktor",
-  kor: 30,
-  magassag: 170 + magassag,
-  suly: 102 + suly,
+const Eleonora = {
+  nev: "Eleonóra",
+  kor: 31,
+  magassag: 120 + magassag,
+  suly: 50 + suly,
   id: 4,
   insurance: true,
-  // Glucophage
-};
+}; // null
 
-const paciens5 = {
-  nev: "Erzsébet",
-  kor: 64,
-  magassag: 154 + magassag,
-  suly: 140 + suly,
+const Nintendo = {
+  nev: "Nintendó",
+  kor: 30,
+  magassag: 179 + magassag,
+  suly: 107 + suly,
   id: 5,
-  insurance: false,
-  //null
-};
+  insurance: true,
+}; // Brufen, Glucophage
 
-const paciens6 = {
-  nev: "Péter",
-  kor: 74,
-  magassag: 162 + magassag,
-  suly: 54 + suly,
+const Zsofia = {
+  nev: "Zsófia",
+  kor: 8,
+  magassag: 108 + magassag,
+  suly: 29 + suly,
   id: 6,
   insurance: true,
-  //Diclophen
-};
+}; // Bensedin
 
-const paciens7 = {
+const Szanella = {
   nev: "Szanella",
-  kor: 21,
-  magassag: 194 + magassag,
-  suly: 69 + suly,
+  kor: 90,
+  magassag: 134 + magassag,
+  suly: 47 + suly,
   id: 7,
   insurance: false,
-  // Bensedin, Brufen
-};
+}; // null
 
-const paciens8 = {
-  nev: "Krisztián",
+const Szamanta = {
+  nev: "Szamanta",
   kor: 25,
-  magassag: 183 + magassag,
-  suly: 170 + suly,
+  magassag: 158 + magassag,
+  suly: 56 + suly,
   id: 8,
   insurance: true,
-  //Glucophage, Brufen
-};
+}; // Bensedin
 
-const doktor1 = {
+const Janos = {
+  nev: "János",
+  kor: 37,
+  magassag: 161 + magassag,
+  suly: 57 + suly,
+  id: 9,
+  insurance: true,
+}; // null
+
+const Illes = {
+  nev: "Illés",
+  kor: 75,
+  magassag: 218 + magassag,
+  suly: 130 + suly,
+  id: 10,
+  insurance: false,
+}; // Brufen
+
+const drBertalan = {
   nev: "Bertalan",
-  paciensek: [paciens1, paciens2, paciens3, paciens4],
+  paciensek: [Csilla, Nintendo, Illes, Barnabas],
 };
 
-const doktor2 = {
-  nev: "Jozsef",
-  paciensek: [paciens5, paciens6, paciens7, paciens8],
+const drAnna = {
+  nev: "Anna",
+  paciensek: [Zsigmond, Eleonora, Janos],
 };
 
-const korhazBajmok = {
-  nev: "St' Bajmok",
-  doktorok: [doktor1, doktor2],
+const drBubo = {
+  nev: "Bubó",
+  paciensek: [Szamanta, Szanella, Zsofia],
 };
 
-//m
-module.exports = korhazBajmok;
+const korhazCsantaver = {
+  nev: "St' Csantavér",
+  doktorok: [drAnna, drBubo, drBertalan],
+};
+
+module.exports = korhazCsantaver;
